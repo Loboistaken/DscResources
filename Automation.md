@@ -43,7 +43,7 @@ Kit. Some of these labels are meant to be used with future automation.
 
 Label | Description | Color Hex | Area of usage (PR, Issue) | Comment
 -- | -- | -- | -- | --
-abandoned | The pull request has been abandoned. | #ffffff White | PR | Used to indicate that the original author of a PR no longer appears to be working on the PR, and the work could be continued by another contributor (as per [Abandoned Pull Requests](https://github.com/PowerShell/DscResources/blob/a923a5f1cda20bd69046095da22c3ba062644922/Maintainers.md#abandoned-pull-requests) and [How to continue working on a pull request when an author (contributor) is unable to complete it](https://github.com/PowerShell/DscResources/blob/master/GettingStartedWithGitHub.md#how-to-continue-working-on-a-pull-request-when-an-author-contributor-is-unable-to-complete-it)). Maintainer needs to comment why the PR is labelled as abandoned. If the original author continues to work on the issue this label should be removed.
+abandoned | The pull request has been abandoned. | #da0e0e White | PR | Used to indicate that the original author of a PR no longer appears to be working on the PR, and the work could be continued by another contributor (as per [Abandoned Pull Requests](https://github.com/PowerShell/DscResources/blob/a923a5f1cda20bd69046095da22c3ba062644922/Maintainers.md#abandoned-pull-requests) and [How to continue working on a pull request when an author (contributor) is unable to complete it](https://github.com/PowerShell/DscResources/blob/master/GettingStartedWithGitHub.md#how-to-continue-working-on-a-pull-request-when-an-author-contributor-is-unable-to-complete-it)). Maintainer needs to comment why the PR is labelled as abandoned. If the original author continues to work on the issue this label should be removed.
 blocking release | The issue or pull request is blocking the next release. Higher priority than label 'High priority'. | #800000 Dark red | Issue, PR | Only needed in modules with a release. The issue or pull request is blocking the next release. This has higher priority to resolve than issues or pull request with the label 'High priority'.
 breaking change | When used on an issue, the issue has been found to be a breaking change. | #ff9900 Orange | Issue, PR | Only needed in modules with a release. When used on a pull request, when the pull request is merged it will result in the major version number to change on the next release.
 bug | The issue is a bug. | #ee0701 Red | Issue |  
@@ -105,7 +105,8 @@ Done | Event | Add label | Remove label | Assigned | Comment
 — | Maintainer closes issue | **Manual** Abandoned, By design, Duplicate, External, Not fixed. | Needs investigation, Needs more information | -- | Maintainer also needs to comment why they are closing the PR.
 ✔️ | Issue is closed by PR | -- | Needs investigation, Needs more information, Help Wanted, In progress | -- | Any tag connected to a Waffle board column will be removed on issue close. This is part of the Waffle integration.
 ✔️ | Issue has no activity for 30 days | -- | -- | -- | Only when issue is _not assigned_ any of these work-labels 'bug', 'enhancement', 'tests', 'documentation', 'on hold', 'new module submission', 'module proposal', then push automatic comment requesting a response or the issue will be closed. The GitHub App Stale are doing this.
-️️️✔️ | Issue has no activity for 40 days | -- | -- | -- | Only when issue is _not assigned_ any of these work-labels 'bug', 'enhancement', 'tests', 'documentation', 'on hold', 'new module submission', 'module proposal', then issue will be automatically closed. The GitHub App Stale are doing this.
+️️️✔️ | Issue has no activity for 40 days | -- | -- | -- | Only when issue is _n
+
 
 ### Pull requests
 
