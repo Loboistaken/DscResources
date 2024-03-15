@@ -1,3 +1,6 @@
+[submodule "xDscResources/xActiveDirectory"]
+	path = xDscResources/xActiveDirectory
+	url = https://github.com/PowerShell/xActiveDirectory
 [submodule "xDscResources/xAzure"]
 	path = xDscResources/xAzure
 	url = https://github.com/PowerShell/xAzure
@@ -190,6 +193,6 @@
 [submodule "DscResources/WmiNamespaceSecurityDsc"]
 	path = DscResources/WmiNamespaceSecurityDsc
 	url = https://github.com/PowerShell/WmiNamespaceSecurityDsc
-[submodule "DscResources/ActiveDirectoryDsc"]
-	path = DscResources/ActiveDirectoryDsc
-	url = https://github.com/PowerShell/ActiveDirectoryDsc
+[submodule "DscResources\\GroupPolicyDsc"]
+	path = DscResources\\GroupPolicyDsc
+	url = https://github.com/corydwood/GroupPolicyDsc

@@ -1,12 +1,8 @@
 # DSC Resource Style Guidelines & Best Practices
 
-In order to provide clean and consistent code, please follow the
-[style guidelines](#style-guidelines) listed below when contributing to any
-[DSC Resource Kit repositories](https://github.com/PowerShell/DscResources/tree/master/xDscResources).
+In order to provide clean and consistent code, please follow the [style guidelines](#style-guidelines) listed below when contributing to any [DSC Resource Kit repositories](https://github.com/PowerShell/DscResources/tree/master/xDscResources).
 
-It is recommended to also follow the guidance from the [best practices](#best-practices)
-section, although this is not required unless the module aims to meet the
-[High Quality Resource Module](HighQualityModuleGuidelines.md) standards.
+It is recommended to also follow the guidance from the [best practices](#best-practices) section, although this is not required unless the module aims to meet the [High Quality Resource Module](HighQualityModuleGuidelines.md) standards.
 
 ## Table of Contents
 
@@ -101,25 +97,20 @@ section, although this is not required unless the module aims to meet the
       - [`New-InvalidResultException`](#new-invalidresultexception)
   - [Pester Tests](#pester-tests)
     - [Capitalized Pester Assertions](#capitalized-pester-assertions)
-    - [Assertion Messages Start with Should](#assertion-messages-start-with-should)
-    - [Context Block Messages Start with When](#context-block-messages-start-with-when)
 
 ## Style Guidelines
 
 ### Markdown Files
 
 If a paragraph includes more than one sentence, end each sentence with a newline.
-GitHub will still render the sentences as a single paragraph, but the readability
-of `git diff` will be greatly improved.
+GitHub will still render the sentences as a single paragraph, but the readability of `git diff` will be greatly improved.
 
 ### General
 
 #### Correct File Encoding
 
-Make sure all files are encoded using UTF-8 (not UTF-8 with BOM), except mof files
-which should be encoded using ASCII.
-You can use ```ConvertTo-UTF8``` and ```ConvertTo-ASCII``` to convert a file to
-UTF-8 or ASCII.
+Make sure all files are encoded using UTF-8 (not UTF-8 with BOM), except mof files which should be encoded using ASCII.
+You can use ```ConvertTo-UTF8``` and ```ConvertTo-ASCII``` to convert a file to UTF-8 or ASCII.
 
 #### Descriptive Names
 
@@ -471,19 +462,6 @@ Each property should be on its own line indented once.
 **Bad:**
 
 ```powershell
-$hashtable = @{
-}
-```
-
-**Bad:**
-
-```powershell
-$hashtable = @{ }
-```
-
-**Bad:**
-
-```powershell
 $hashtable = @{Key1 = 'Value1';Key2 = 2;Key3 = '3'}
 ```
 
@@ -493,12 +471,6 @@ $hashtable = @{Key1 = 'Value1';Key2 = 2;Key3 = '3'}
 $hashtable = @{ Key1 = 'Value1'
 Key2 = 2
 Key3 = '3' }
-```
-
-**Good:**
-
-```powershell
-$hashtable = @{}
 ```
 
 **Good:**
@@ -577,18 +549,15 @@ $string = "String that evaluate variable '{0}'" -f $SomeObject.SomeProperty
 There should not be any commented-out code in checked-in files.
 The first letter of the comment should be capitalized.
 
-Single line comments should be on their own line and start with a single pound-sign
-followed by a single space. The comment should be indented the same amount as the
-following line of code.
+Single line comments should be on their own line and start with a single pound-sign followed by a single space.
+The comment should be indented the same amount as the following line of code.
 
-Comments that are more than one line should use the ```<# #>``` format rather
-than the single pound-sign. The opening and closing brackets should be on their
-own lines. The comment inside the brackets should be indented once more than the
-brackets. The brackets should be indented the same amount as the following line
-of code.
+Comments that are more than one line should use the ```<# #>``` format rather than the single pound-sign.
+The opening and closing brackets should be on their own lines.
+The comment inside the brackets should be indented once more than the brackets.
+The brackets should be indented the same amount as the following line of code.
 
-Formatting help-comments for functions has a few more specific rules that can be
-found [here](#all-functions-must-have-comment-based-help).
+Formatting help-comments for functions has a few more specific rules that can be found [here](#all-functions-must-have-comment-based-help).
 
 **Bad:**
 
@@ -749,13 +718,11 @@ All files must end with a newline, see [StackOverflow.](http://stackoverflow.com
 #### Newline Character Encoding
 
 Save [newlines](http://en.wikipedia.org/wiki/Newline) using CR+LF instead of CR.
-For interoperability reasons, we recommend that you follow [these instructions](GettingStartedWithGitHub.md#setup-git)
-when installing Git on Windows so that newlines saved to GitHub are simply CRs.
+For interoperability reasons, we recommend that you follow [these instructions](GettingStartedWithGitHub.md#setup-git) when installing Git on Windows so that newlines saved to GitHub are simply CRs.
 
 #### No More Than Two Consecutive Newlines
 
-Code should not contain more than two consecutive newlines unless they are contained
-in a here-string.
+Code should not contain more than two consecutive newlines unless they are contained in a here-string.
 
 **Bad:**
 
@@ -830,8 +797,7 @@ if ($booleanValue)
 }
 ```
 
-When assigning to a variable, opening curly braces should be on the same line as
-the assignment operator.
+When assigning to a variable, opening curly braces should be on the same line as the assignment operator.
 
 **Bad:**
 
@@ -907,11 +873,8 @@ function Get-MyValue
 
 #### Two Newlines After Closing Brace
 
-Each closing curly brace **ending** a function, conditional block, loop, etc.
-should be followed by exactly two newlines unless it is directly followed by another
-closing brace. If the closing brace is followed by another closing brace or continues
-a conditional or switch block, there should be only one newline after the closing
-brace.
+Each closing curly brace **ending** a function, conditional block, loop, etc. should be followed by exactly two newlines unless it is directly followed by another closing brace.
+If the closing brace is followed by another closing brace or continues a conditional or switch block, there should be only one newline after the closing brace.
 
 **Bad:**
 
@@ -965,8 +928,7 @@ Get-MyValue
 
 #### One Space Between Type and Variable Name
 
-If you must declare a variable type, type declarations should be separated from
-the variable name by a single space.
+If you must declare a variable type, type declarations should be separated from the variable name by a single space.
 
 **Bad:**
 
@@ -1052,8 +1014,7 @@ function Get-TargetResource
 
 #### One Space Between Keyword and Parenthesis
 
-If a keyword is followed by a parenthesis, there should be single space between
-the keyword and the parenthesis.
+If a keyword is followed by a parenthesis, there should be single space between the keyword and the parenthesis.
 
 **Bad:**
 
@@ -1165,9 +1126,8 @@ function ConvertTo-NormalizedString
 
 #### Functions Have Comment-Based Help
 
-All functions should have comment-based help with the correct syntax directly
-above the function. Comment-help should include at least the SYNOPSIS section and
-a PARAMETER section for each parameter.
+All functions should have comment-based help with the correct syntax directly above the function.
+Comment-help should include at least the SYNOPSIS section and a PARAMETER section for each parameter.
 
 **Bad:**
 
@@ -1228,9 +1188,8 @@ function New-Event
 #### Parameter Block at Top of Function
 
 There must be a parameter block declared for every function.
-The parameter block must be at the top of the function and not declared next to
-the function name. Functions with no parameters should still display an empty
-parameter block.
+The parameter block must be at the top of the function and not declared next to the function name.
+Functions with no parameters should still display an empty parameter block.
 
 **Bad:**
 
@@ -1282,17 +1241,12 @@ function Write-Nothing
 
 #### Correct Format for Parameter Block
 
-- An empty parameter block should be displayed on its own line like this:
-  `param ()`.
-- A non-empty parameter block should have the opening and closing parentheses on
-  their own line.
+- An empty parameter block should be displayed on its own line like this: `param ()`.
+- A non-empty parameter block should have the opening and closing parentheses on their own line.
 - All text inside the parameter block should be indented once.
-- Every parameter should include the `[Parameter()]` attribute, regardless of
-  whether the attribute requires decoration or not.
-- A parameter that is mandatory should contain this decoration:
-  `[Parameter(Mandatory = $true)]`.
-- A parameter that is not mandatory should _not_ contain a `Mandatory` decoration
-  in the `[Parameter()]`.
+- Every parameter should include the `[Parameter()]` attribute, regardless of whether the attribute requires decoration or not.
+- A parameter that is mandatory should contain this decoration: `[Parameter(Mandatory = $true)]`.
+- A parameter that is not mandatory should _not_ contain a `Mandatory` decoration in the `[Parameter()]`.
 
 **Bad:**
 
@@ -1503,8 +1457,7 @@ function New-Event
 #### Parameter Type on Line Above
 
 The parameter type must be on its own line above the parameter name.
-If an attribute needs to follow the type, it should also have its own line between
-the parameter type and the parameter name.
+If an attribute needs to follow the type, it should also have its own line between the parameter type and the parameter name.
 
 **Bad:**
 
@@ -1573,8 +1526,7 @@ function New-Event
 #### Parameter Attributes on Separate Lines
 
 Parameter attributes should each have their own line.
-All attributes should go above the parameter type, except those that *must* be
-between the type and the name.
+All attributes should go above the parameter type, except those that *must* be between the type and the name.
 
 **Bad:**
 
@@ -1650,10 +1602,9 @@ function Write-Log
 
 #### Script, Environment and Global Variable Names Include Scope
 
-Script, environment, and global variables must always include their scope in the
-variable name unless the 'using' scope is needed. The script and global scope
-specifications should be all in lowercase. Script and global variable names following
-the scope should use camelCase.
+Script, environment, and global variables must always include their scope in the variable name unless the 'using' scope is needed.
+The script and global scope specifications should be all in lowercase.
+Script and global variable names following the scope should use camelCase.
 
 **Bad:**
 
@@ -1686,8 +1637,8 @@ function New-File
 Although adoping the _best practices_ is optional, doing so will help improve the
 quality of the DSC resource module.
 
-Note: Modules that aim to meet the [High Quality Resource Module](HighQualityModuleGuidelines.md)
-standards must also implement the _best practices_ whereever possible.
+Note: Modules that aim to meet the [High Quality Resource Module](HighQualityModuleGuidelines.md) standards
+must also implement the _best practices_ whereever possible.
 
 ### General Best Practices
 
@@ -1695,8 +1646,7 @@ standards must also implement the _best practices_ whereever possible.
 
 Using hardcoded computer names exposes sensitive information on your machine.
 Use a parameter or environment variable instead if a computer name is necessary.
-This comes from [this](https://github.com/PowerShell/PSScriptAnalyzer/blob/development/RuleDocumentation/AvoidUsingComputerNameHardcoded.md)
-PS Script Analyzer rule.
+This comes from [this](https://github.com/PowerShell/PSScriptAnalyzer/blob/development/RuleDocumentation/AvoidUsingComputerNameHardcoded.md) PS Script Analyzer rule.
 
 **Bad:**
 
@@ -1714,8 +1664,7 @@ Invoke-Command -Port 0 -ComputerName $env:computerName
 
 Empty catch blocks are not necessary.
 Most errors should be thrown or at least acted upon in some way.
-If you really don't want an error to be thrown or logged at all, use the ErrorAction
-parameter with the SilentlyContinue value instead.
+If you really don't want an error to be thrown or logged at all, use the ErrorAction parameter with the SilentlyContinue value instead.
 
 **Bad:**
 
@@ -1735,14 +1684,10 @@ Get-Command -Name Invoke-NotACommand -ErrorAction SilentlyContinue
 
 #### Ensure Null is on Left Side of Comparisons
 
-When comparing a value to ```$null```, ```$null``` should be on the left side of
-the comparison.
+When comparing a value to ```$null```, ```$null``` should be on the left side of the comparison.
 This is due to an issue in PowerShell.
-If ```$null``` is on the right side of the comparison and the value you are comparing
-it against happens to be a collection, PowerShell will return true if the collection
-*contains* ```$null``` rather than if the entire collection actually *is* ```$null```.
-Even if you are sure your variable will never be a collection, for consistency,
-please ensure that ```$null``` is on the left side of all comparisons.
+If ```$null``` is on the right side of the comparison and the value you are comparing it against happens to be a collection, PowerShell will return true if the collection *contains* ```$null``` rather than if the entire collection actually *is* ```$null```.
+Even if you are sure your variable will never be a collection, for consistency, please ensure that ```$null``` is on the left side of all comparisons.
 
 **Bad:**
 
@@ -1765,15 +1710,12 @@ if ($null -eq $myArray)
 #### Avoid Global Variables
 
 Avoid using global variables whenever possible.
-These variables can be edited by any other script that ran before your script or
-is running at the same time as your script.
-Use them only with extreme caution, and try to use parameters or script/local
-variables instead.
+These variables can be edited by any other script that ran before your script or is running at the same time as your script.
+Use them only with extreme caution, and try to use parameters or script/local variables instead.
 
 This rule has a few exceptions:
 
-- The use of ```$global:DSCMachineStatus``` is still recommended to restart a
-  machine from a DSC resource.
+- The use of ```$global:DSCMachineStatus``` is still recommended to restart a machine from a DSC resource.
 
 **Bad:**
 
@@ -1833,10 +1775,9 @@ function Get-Settings
 
 #### Use Variables Rather Than Extensive Piping
 
-This is a script not a console. Code should be easy to follow. There should be no
-more than 1 pipe in a line. This rule is specific to the DSC Resource Kit - other
-PowerShell best practices may say differently, but this is our preferred format
-for readability.
+This is a script not a console. Code should be easy to follow.
+There should be no more than 1 pipe in a line.
+This rule is specific to the DSC Resource Kit - other PowerShell best practices may say differently, but this is our preferred format for readability.
 
 **Bad:**
 
@@ -1859,8 +1800,8 @@ foreach ($validPropertyObject in $validPropertyObjects)
 
 #### Avoid Unnecessary Type Declarations
 
-If it is clear what type a variable is then it is not necessary to explicitly
-declare its type. Extra type declarations can clutter the code.
+If it is clear what type a variable is then it is not necessary to explicitly declare its type.
+Extra type declarations can clutter the code.
 
 **Bad:**
 
@@ -1902,9 +1843,7 @@ ls -File $root -Recurse | ? { @('.gitignore', '.mof') -contains $_.Extension }
 **Good:**
 
 ```Powershell
-Get-ChildItem -File $root -Recurse | Where-Object -FilterScript {
-    @('.gitignore', '.mof') -contains $_.Extension
-}
+Get-ChildItem -File $root -Recurse | Where-Object { @('.gitignore', '.mof') -contains $_.Extension }
 ```
 
 ### Avoid Invoke-Expression
@@ -1958,7 +1897,7 @@ Get-CIMInstance -ClassName Win32_Process
 #### Avoid Write-Host
 
 [Write-Host is harmful](http://www.jsnover.com/blog/2013/12/07/write-host-considered-harmful/).
-Use alternatives such as Write-Verbose, Write-Output, Write-Debug, etc.
+Use alternatives such as Writ-Verbose, Write-Output, Write-Debug, etc.
 
 **Bad:**
 
@@ -1974,10 +1913,9 @@ Write-Verbose -Message 'Setting the variable to a value.'
 
 #### Avoid ConvertTo-SecureString with AsPlainText
 
-SecureStrings should be encrypted. When using ConvertTo-SecureString with the
-`AsPlainText` parameter specified the SecureString text is not encrypted and thus
-not secure. This is allowed in tests/examples when needed, but never in the actual
-resources.
+SecureStrings should be encrypted.
+When using ConvertTo-SecureString with the AsPlainText parameter specified the SecureString text is not encrypted and thus not secure
+This is allowed in tests/examples when needed, but never in the actual resources.
 
 **Bad:**
 
@@ -2007,8 +1945,7 @@ Set-Background -Color $backgroundColor
 
 #### Avoid Default Values for Mandatory Parameters
 
-Default values for mandatory parameters will always be overwritten, thus they are
-never used and can cause confusion.
+Default values for mandatory parameters will always be overwritten, thus they are never used and can cause confusion.
 
 **Bad:**
 
@@ -2046,8 +1983,7 @@ function Get-Something
 
 Switch parameters have 2 values - there or not there.
 The default value is automatically $false so it doesn't need to be declared.
-If you are tempted to set the default value to $true - don't - refactor your code
-instead.
+If you are tempted to set the default value to $true - don't - refactor your code instead.
 
 **Bad:**
 
@@ -2123,15 +2059,12 @@ function Get-Something
 
 #### Avoid Redefining Reserved Parameters
 
-[Reserved Parameters](https://msdn.microsoft.com/en-us/library/dd901844(v=vs.85).aspx)
-such as Verbose, Debug, etc. are already added to the function at runtime so don't
-redefine them. Add the CmdletBinding attribute to include the reserved parameters
-in your function.
+[Reserved Parameters](https://msdn.microsoft.com/en-us/library/dd901844(v=vs.85).aspx ) such as Verbose, Debug, etc. are already added to the function at runtime so don't redefine them.
+Add the CmdletBinding attribute to include the reserved parameters in your function.
 
 #### Use the CmdletBinding Attribute on Every Function
 
-The CmdletBinding attribute adds the reserved parameters to your function which is
-always preferable.
+The CmdletBinding attribute adds the reserved parameters to your function which is always preferable.
 
 **Bad:**
 
@@ -2162,9 +2095,7 @@ function Get-Property
 
 #### Define the OutputType Attribute for All Functions With Output
 
-The OutputType attribute should be declared if the function has output so that
-the correct error messages get displayed if the function ever produces an incorrect
-output type.
+The OutputType attribute should be declared if the function has output so that the correct error messages get displayed if the function ever produces an incorrect output type.
 
 **Bad:**
 
@@ -2269,18 +2200,13 @@ function Get-MyBoolean
 
 #### Get-TargetResource should not contain unused non-mandatory parameters
 
-The inclusion of a non-mandatory parameter that is never used could signal that
-there is a design flaw in the implementation of the `Get-TargetResource` function.
-The non-mandatory parameters that are used to call `Get-TargetResource` should help
-to retrieve the actual values of the properties for the resource.
-For example, if there is a parameter `Ensure` that is non-mandatory, that parameter
-describes the state the resource should have, but it might not be used to retrieve
+The inclusion of a non-mandatory parameter that is never used could signal that there is a design flaw in the implementation of the `Get-TargetResource` function.
+The non-mandatory parameters that are used to call `Get-TargetResource` should help to retrieve the actual values of the properties for the resource.
+For example, if there is a parameter `Ensure` that is non-mandatory, that parameter describes the state the resource should have, but it might not be used to retrieve
 the actual values.
-Another example would be if a parameter `FilePathName` is set to be non-mandatory,
-but `FilePathName` is actually a property that `Get-TargetResource` should return
+Another example would be if a parameter `FilePathName` is set to be non-mandatory, but `FilePathName` is actually a property that `Get-TargetResource` should return
 the actual value of.
-In that case it does not make sense to assign a value to `FilePathName` when
-calling `Get-TargetResource` because that value will never be used.
+In that case it does not make sense to assign a value to `FilePathName` when calling `Get-TargetResource` because that value will never be used.
 
 **Bad:**
 
@@ -2373,26 +2299,19 @@ function Get-TargetResource
 
 #### Any unused parameters that must be included in a function definition should include 'Not used in \<function_name\>' in the help comment for that parameter in the comment-based help
 
-The inclusion of a mandatory parameter in the 'Get-TargetResource' function that
-is never used could signal that there is a design flaw in the implementation of
-the function. The mandatory parameters that are used to call 'Get-TargetResource'
-should help to retrieve the actual values of the properties for the resource.
-For example, if there is a parameter 'Ensure' that is mandatory, that parameter
-will not be used to retrieve the actual values. Another example would be if a
-parameter 'FilePathName' is set to be mandatory, but 'FilePathName' is actually
-a property that 'Get-TargetResource' should return the actual value of. In that
-case it does not make sense to assign a value to 'FilePathName' when calling
-'Get-TargetResource' because that value will never be used.
+The inclusion of a mandatory parameter in the 'Get-TargetResource' function that is never used could signal that there is a design flaw in the implementation
+of the function.
+The mandatory parameters that are used to call 'Get-TargetResource' should help to retrieve the actual values of the properties for the resource.
+For example, if there is a parameter 'Ensure' that is mandatory, that parameter will not be used to retrieve the actual values.
+Another example would be if a parameter 'FilePathName' is set to be mandatory, but 'FilePathName' is actually a property that 'Get-TargetResource' should
+return the actual value of. In that case it does not make sense to assign a value to 'FilePathName' when calling 'Get-TargetResource' because that value will
+never be used.
 
-The inclusion of a mandatory or a non-mandatory parameter in the Test-TargetResource
-function that is not used is more common since it is required that both the
-'Set-TargetResource' and the 'Test-TargetResource' have the same parameters. Thus,
-there will be times when not all of the parameters in the 'Test-TargetResource'
+The inclusion of a mandatory or a non-mandatory parameter in the Test-TargetResource function that is not used is more common since it is required that both
+the 'Set-TargetResource' and the 'Test-TargetResource' have the same parameters. Thus, there will be times when not all of the parameters in the 'Test-TargetResource'
 function will be used in the function.
 
-If there is a need design-wise to include a mandatory parameter that will not be
-used, then the comment-based help for that parameter should contain the description
-'Not used in <function_name>'.
+If there is a need design-wise to include a mandatory parameter that will not be used, then the comment-based help for that parameter should contain the description 'Not used in <function_name>'.
 
 **Bad:**
 
@@ -2681,14 +2600,16 @@ throw ($script:localizedData.FailedToReadProperties -f $property, $path)
 ##### Helper functions for localization
 
 There are also five helper functions to simplify localization. These can be
-be found in the repository [DscResource.Template](https://github.com/PowerShell/DscResource.Template)
-in the module script file [DscResource.LocalizationHelper](https://github.com/PowerShell/DscResource.Template/blob/master/Modules/DscResource.LocalizationHelper/DscResource.LocalizationHelper.psm1)
-
-To use it, copy the module folder
-[DscResource.LocalizationHelper](https://github.com/PowerShell/DscResource.Template/blob/master/Modules/DscResource.LocalizationHelper)
+currently only be found in other resource modules, for example in the resource
+module SqlServerDsc, in the [CommonResourceHelper](https://github.com/PowerShell/SqlServerDsc/blob/dev/DSCResources/CommonResourceHelper.psm1)
+module. To use it, copy the PowerShell module
+[CommonResourceHelper.psm1](https://github.com/PowerShell/SqlServerDsc/blob/dev/DSCResources/CommonResourceHelper.psm1)
 and the unit tests
-[DscResource.LocalizationHelper.Tests.ps1](https://github.com/PowerShell/DscResource.Template/blob/master/Tests/Unit/DscResource.LocalizationHelper.Tests.ps1)
+[CommonResourceHelper.Tests.ps1](https://github.com/PowerShell/SqlServerDsc/blob/dev/Tests/Unit/CommonResourceHelper.Tests.ps1)
 to the new resource module.
+
+> **Note:** The CommonResourceHelper module will be moved to DscResource.Template
+> in the future.
 
 ###### Get-LocalizedData
 
@@ -2697,19 +2618,8 @@ This should be used at the top of each resource PowerShell module script file
 Refer to the comment-based help for more information about this helper function.
 
 ```powershell
-$script:resourceModulePath = Split-Path `
-    -Path (Split-Path -Path $PSScriptRoot -Parent) `
-    -Parent
-
-$script:localizationModulePath = Join-Path `
-    -Path $script:resourceModulePath `
-    -ChildPath 'Modules\DscResource.LocalizationHelper'
-
-Import-Module -Name (
-    Join-Path `
-        -Path $script:localizationModulePath `
-        -ChildPath 'DscResource.LocalizationHelper.psm1'
-    )
+Import-Module -Name (Join-Path -Path (Split-Path -Path $PSScriptRoot -Parent) `
+                               -ChildPath 'CommonResourceHelper.psm1')
 
 $script:localizedData = Get-LocalizedData -ResourceName 'MSFT_SqlSetup'
 ```
@@ -2788,8 +2698,7 @@ catch
 
 #### Capitalized Pester Assertions
 
-Pester assertions should all start with capital letters. This makes code easier
-to read.
+Pester assertions should all start with capital letters.  This makes code easier to read.
 
 **Bad:**
 
@@ -2804,89 +2713,5 @@ it 'Should return something' {
 ```powershell
 It 'Should return something' {
     Get-TargetResource @testParameters | Should -Be 'something'
-}
-```
-
-#### Assertion Messages Start with Should
-
-Pester assertions should always start with the word 'Should'. This is to ensure the
-test results read more naturally as well as helping to indentify assertion messages
-that aren't making assertions.
-
-**Bad:**
-
-```powershell
-# This is not an assertive message
-It 'When calling Get-TargetResource' {
-    Get-TargetResource @testParameters | Should -Be 'something'
-}
-```
-
-**Bad:**
-
-```powershell
-# This does not start with 'Should'
-It 'Something is returned' {
-    Get-TargetResource @testParameters | Should -Be 'something'
-}
-```
-
-**Good:**
-
-```powershell
-It 'Should return something' {
-    Get-TargetResource @testParameters | Should -Be 'something'
-}
-```
-
-#### Context Block Messages Start with When
-
-Pester test **outer** `Context` block messages should always start with the word
-'When'. This is to ensure the test results read more naturally as well as helping
-to indentify context messages that aren't defining context.
-
-**Bad:**
-
-```powershell
-# Context block not using 'When'
-Context 'Calling Get-TargetResource with default parameters'
-    It 'Should return something' {
-        Get-TargetResource @testParameters | Should -Be 'something'
-    }
-}
-```
-
-**Bad:**
-
-```powershell
-Context 'When calling Get-TargetResource'
-    # Inner context block not using 'When'
-    Context 'With default parameters'
-        It 'Should return something' {
-            Get-TargetResource @testParameters | Should -Be 'something'
-        }
-    }
-}
-```
-
-**Good:**
-
-```powershell
-Context 'When Get-TargetResource is called with default parameters'
-    It 'Should return something' {
-        Get-TargetResource @testParameters | Should -Be 'something'
-    }
-}
-```
-
-**Good:**
-
-```powershell
-Context 'When Get-TargetResource is called'
-    Context 'When passing default parameters'
-        It 'Should return something' {
-            Get-TargetResource @testParameters | Should -Be 'something'
-        }
-    }
 }
 ```
